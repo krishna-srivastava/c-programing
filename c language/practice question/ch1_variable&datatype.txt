@@ -1,0 +1,67 @@
+// question_1: find the sum of two variable.
+#include<stdio.h>
+int main(){
+    int a,b;
+    a=10,b=4;
+
+    int sum=a+b;
+    printf("%d\n",sum);
+    return 0;
+};
+
+
+// question_2: find the multiply of two variable given by user.
+#include<stdio.h>
+int main(){
+    int a,b;
+    printf("enter number a: ");
+    scanf("%d",&a);
+
+    printf("enter number b: ");
+    scanf("%d",&b);
+
+    int sum=a*b;
+    printf("%d\n",sum);
+    return 0;
+};
+
+
+// question_3: write a program to find the area of rectangle given by user.
+#include<stdio.h>
+int main(){
+    int length,breath;
+    printf("enter number lenght: ");
+    scanf("%d",&length);
+
+    printf("enter number breath: ");
+    scanf("%d",&breath);
+
+    int areaOfrectangle = length*breath;
+    printf("%d\n",areaOfrectangle);
+    return 0;
+};
+
+
+// question_4: write a program to find the area of circle given by user.
+#include<stdio.h>
+int main(){
+    float radius;
+    printf("enter number radius: ");
+    scanf("%d",&radius);
+
+    float areaOfcircle = 3.14*radius*radius;
+    printf("%d\n",areaOfcircle);
+    return 0;
+};
+
+
+// question_5: write a program to find the area of square.
+#include<stdio.h>
+int main(){
+    int side;
+    side=17;
+
+    int areaOfsquare = side*side;
+    printf("%d\n",areaOfsquare);
+    return 0;
+};

@@ -1,0 +1,171 @@
+// Question_1:write to program to store the data of student using structure. 
+#include<stdio.h>
+#include<string.h>
+
+struct student{
+    char name[100];
+    int roll;
+    float cgpa;
+};
+
+int main(){
+    struct student s1;
+    strcpy(s1.name,"krishna");
+    s1.roll=6969;
+    s1.cgpa=6.9;
+    printf("the name of student 1 is: %s\n",s1.name);
+    printf("the roll number of student 1 is: %d\n",s1.roll);
+    printf("the cgpa of student 1 is: %f\n",s1.cgpa);
+
+    struct student s2;
+    strcpy(s2.name,"dani daneil");
+    s2.roll=696969;
+    s2.cgpa=6.969;
+    printf("the name of student 2 is: %s\n",s2.name);
+    printf("the roll number of student 2 is: %d\n",s2.roll);
+    printf("the cgpa of student 2 is: %f\n",s2.cgpa);
+};
+
+
+// Question_2:write to program to store the data of student using array of structure.
+#include<stdio.h>
+#include<string.h>
+
+struct student{
+    char name[100];
+    int roll;
+    float cgpa;
+};
+
+int main(){
+    struct student s1[100];
+    strcpy(s1[0].name,"krishnaa");
+    s1[0].roll=6969;
+    s1[0].cgpa=6.9;
+    printf("the name of student 1 is: %s\n",s1[0].name);
+    printf("the roll number of student 1 is: %d\n",s1[0].roll);
+    printf("the cgpa of student 1 is: %f\n",s1[0].cgpa);
+};
+
+
+// Question_3:write to program to store the data of student in a initialized way.
+#include<stdio.h>
+#include<string.h>
+
+struct student{
+    char name[100];
+    int roll;
+    float cgpa;
+};
+
+int main(){
+    struct student s1={"krishna",6969,6.9};
+    printf("the name of student 1 is: %s\n",s1.name);
+    printf("the roll number of student 1 is: %d\n",s1.roll);
+    printf("the cgpa of student 1 is: %f\n",s1.cgpa);
+
+    struct student s2={"nigga",9696,9.6};
+    printf("the name of student 2 is: %s\n",s2.name);
+    printf("the roll number of student 2 is: %d\n",s2.roll);
+    printf("the cgpa of student 2 is: %f\n",s2.cgpa);
+};
+
+
+// Question_4:write to program to store the data of student using arrow operator.
+#include<stdio.h>
+#include<string.h>
+
+struct student{
+    char name[100];
+    int roll;
+    float cgpa;
+};
+
+int main(){
+    struct student s1={"nigga",9696,9.6};
+    struct student *ptr=&s1;
+    printf("the name of student 1 is: %s\n",ptr->name);
+    printf("the roll number of student 1 is: %d\n",ptr->roll);
+    printf("the cgpa of student 1 is: %f\n",ptr->cgpa);
+};
+
+
+// Question_5:write to program to store the data of student using typedef.
+#include<stdio.h>
+#include<string.h>
+
+typedef struct student{
+    char name[100];
+    int roll;
+    float cgpa;
+}s;
+int main(){
+    s s1;
+    strcpy(s1.name,"krishna");
+    s1.roll=6969;
+    s1.cgpa=6.9;
+    printf("the name of student 1 is: %s\n",s1.name);
+    printf("the roll number of student 1 is: %d\n",s1.roll);
+    printf("the cgpa of student 1 is: %f\n",s1.cgpa);
+};
+
+
+// Question_6:create a 2-D vector using structure.
+#include<stdio.h>
+#include<string.h>
+
+struct vector{
+    int x;
+    int y;
+};
+struct vector sumvector(struct vector v1, struct vector v2){
+    struct vector result;
+    result.x=v1.x+v2.x;
+    result.y=v1.y+v2.y;
+    return result;
+}
+int main(){
+    struct vector v1, v2, sum;
+    v1.x=4;
+    v1.y=4;
+    printf("X dim is %d and Y dim is %d\n",v1.x,v1.y);
+    
+    v2.x=1;
+    v2.y=5;
+    printf("X dim is %d and Y dim is %d\n",v2.x,v2.y);
+    
+    sum=sumvector(v1,v2);
+    printf("X dim result is %d and Y dim result is %d\n",sum);
+    return 0;
+}
+
+
+// Question_7:create an array of 5 complex number created in 5 problem 5 and display them with the help of a display function.the value must be taken as an input from the user.
+#include<stdio.h>
+#include<string.h>
+
+typedef struct complex{
+    int real;
+    int complex;
+}comp;
+
+void display(comp c){
+    printf("the real no. is %d\n",c.real);
+    printf("the complex no. is %d\n",c.complex);
+}
+
+int main(){
+    comp cnums[5];
+    for(int i=0; i<5; i++){
+        printf("enter the real value for %d\n",i+1);
+        scanf("%d",&cnums[i].real);
+
+        printf("enter the complex value for %d\n",i+1);
+        scanf("%d",&cnums[i].complex);
+    };
+    
+    for(int i=0; i<5; i++){
+        display(cnums[i]);
+    };
+    return 0;
+}

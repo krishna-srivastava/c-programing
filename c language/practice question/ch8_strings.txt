@@ -1,0 +1,158 @@
+// Question_1:create a string and print its content using a loop.
+#include<stdio.h>
+int main(){
+    char str[]="hello world";
+    char *ptr=str;
+    while(*ptr != '\0'){
+        printf("%c",*ptr);
+        ptr++;
+    };
+    return 0;
+};
+
+
+// Question_2:create a string to print user full name.
+#include<stdio.h>
+int main(){
+    char str[50];
+    printf("enter you full name: ");
+    gets(str);
+    printf("your name is: %s",str);
+    return 0;
+};
+
+
+// Question_3:write a program to calculate the lenght of string.
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int *str="hello world";
+    int length=strlen(str);
+    printf("the length of string is %d",length);
+    return 0;
+};
+
+
+// Question_4:write a program to concat two string.
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str1[50]="krishna ";
+    char str2[50]="srivastava";
+    strcat(str1,str2);
+    printf("%s",str1);
+    return 0;
+};
+
+
+// Question_5:write a program to take string as an input from the user %c and %s confirm that the string are equal.
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str1[100],str2[100];
+    char ch;
+    int i=0;
+    
+    printf("enter a string1: \n");
+    scanf("%s",str1);
+
+    printf("enter a string2 character by character: \n");
+    while(ch != '\n'){
+        fflush(stdin);
+        scanf("%c",&ch);
+        str2[i]=ch;
+        i++;
+    };
+    str2[i-1]='\0';
+
+    if(strcmp(str1,str2)==0){
+        printf("equal");
+    }else{
+        printf("not equal");
+    };
+    return 0;
+};
+
+
+// Question_6:write a program to slice a string.
+#include<stdio.h>
+void slice(char *st, int m, int n){
+    int i=0;
+    while((m+i)<n){
+        st[i]=st[m+i];
+        i++;
+    };
+    st[i]='\0';
+}
+int main(){
+    char st[]="hellew world";
+    slice(st,1,8);
+    printf("%s",st);
+    return 0;
+};
+
+
+// Question_7:write a program for a string to check whether a character is present or not.
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[100],ch;
+    int i=0;
+    int found=0;
+    printf("enter a string: \n");
+    scanf("%s",str);
+
+    printf("enter a character to search: \n");
+    scanf("%c",ch);
+
+    for(i=0;str[i] != '\0'; i++){
+        if(str[i]==ch){
+            found=1;
+            break;
+        };
+    };
+    if(found){
+        printf("present");
+    }else{
+        printf("absent");
+    };
+    return 0;
+};
+
+
+// Question_8:write a program to encrypt a string by adding 1 to the ascii value of its character.
+#include<stdio.h>
+void encrypt(char *c){
+    char *ptr=c;
+    while(*ptr != '\0'){
+        *ptr=*ptr+1;
+        ptr++;
+    };
+};
+int main(){
+    char str[]="i am stronger i am smarter i am better, better!";
+    encrypt(str);
+    printf("encrypt message = %s",str);
+    return 0;
+};
+
+
+// Question_9:write a program of a string to occurence a character.
+#include<stdio.h>
+int occurence(char st[],char c){
+    char *ptr=st;
+    int count=0;
+    while(*ptr != '\0'){
+        if(*ptr==c){
+            count++;
+        };
+        ptr++;
+    };
+    return count;
+};
+int main(){
+    char st[]="happy happy";
+    int count=occurence(st,'p');
+    printf("occurence= %c",count);
+    return 0;
+};

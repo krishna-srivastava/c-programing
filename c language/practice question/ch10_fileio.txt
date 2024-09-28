@@ -1,0 +1,103 @@
+// Question_1:write a program to read a character of another file.
+#include<stdio.h>
+int main(){
+    char ch;
+    FILE *fptr;
+    fptr=fopen("yourfilename.txt","r");
+    fscanf(fptr,"%c",&ch);
+    printf("\ncharacter= %c",ch);
+    fclose(fptr);
+    return 0;
+}
+
+
+// Question_2:write a program to write a mango on another file.
+#include<stdio.h>
+int main(){
+    char ch;
+    FILE *fptr;
+    fptr=fopen("yourfilename.txt","w");
+    fprintf(fptr,"%c",'M');
+    fprintf(fptr,"%c",'a');
+    fprintf(fptr,"%c",'n');
+    fprintf(fptr,"%c",'g');
+    fprintf(fptr,"%c",'o');
+    fclose(fptr);
+    return 0;
+}
+
+
+// Question_3:write a program to read a character of another file using fgetc.
+#include<stdio.h>
+int main(){
+    FILE *fptr;
+    fptr=fopen("yourfilename.txt","r");
+    printf("character is %c\n",fgetc(fptr));
+    printf("character is %c\n",fgetc(fptr));
+    printf("character is %c\n",fgetc(fptr));
+    printf("character is %c\n",fgetc(fptr));
+    printf("character is %c\n",fgetc(fptr));
+    fclose(fptr);
+    return 0;
+}
+
+
+// Question_4:write a program to write a character of another file using fputc.
+#include<stdio.h>
+int main(){
+    FILE *fptr;
+    fptr=fopen("yourfilename.txt","w");
+    fputc('M',fptr);
+    fputc('a',fptr);
+    fputc('n',fptr);
+    fputc('g',fptr);
+    fputc('o',fptr);
+    fclose(fptr);
+    return 0;
+}
+
+
+// Question_5:write a program to read a whole paragraph from file.
+#include<stdio.h>
+int main(){
+    FILE *fptr;
+    fptr=fopen("yourfilename.txt","r");
+    char ch;
+    ch=fgetc(fptr);
+    while(ch != EOF){
+        printf("%c",ch);
+        ch=fgetc(fptr);
+    }
+    fclose(fptr);
+    return 0;
+}
+
+
+// Question_6:write a program to read a three integer from a file.
+#include<stdio.h>
+int main(){
+    int a,b,c;
+    FILE *fptr;
+    fptr=fopen("yourfilename.txt","r");
+    fscanf(fptr,"%d",&a);
+    fscanf(fptr,"%d",&b);
+    fscanf(fptr,"%d",&c);
+    fclose(fptr);
+    return 0;
+}
+
+
+// Question_7:write a program to genrate multiplication table of a given number in text format.
+#include<stdio.h>
+int main(){
+    int num;
+    printf("enter a integer you need the table of\n");
+    scanf("%d",&num);
+    FILE *fptr;
+    fptr=fopen("yourfilename.txt","w");
+    for(int i=0; i<10; i++){
+        fprintf(fptr,"%d X %d= ",num,i+1,num*(i+1));
+    }
+    fclose(fptr);
+    return 0;
+}

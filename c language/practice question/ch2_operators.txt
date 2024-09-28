@@ -1,0 +1,71 @@
+// Question_1:write a program using power function.
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int a,b;
+    a=2,b=3;
+
+    int power=pow(a,b);
+    printf("%d",power);
+    return 0;
+
+    // output=6;
+};
+
+
+// Question_2:solve int a=1.999999
+#include<stdio.h>
+int main(){
+    int a=(int)1.999999;
+    printf("%d",a);
+    return 0;
+};
+
+
+// Question_3:solve 4*3/6*2
+#include<stdio.h>
+int main(){
+    printf(4*3/6*2);
+    return 0;
+
+    // ans= 4*3/6*2
+    //     12/6*2
+    //     2*2=4
+    // output=4
+};
+
+
+// Question_4:write a program to check if a number is divisible by 2 or not.
+#include<stdio.h>
+int main(){
+    int x;
+    printf("enter a number: ");
+    scanf("%d",&x);
+
+    printf("%d",x%2==0);
+        return 0;
+};
+
+
+// Question_5:solve this logical operator.
+#include<stdio.h>
+int main(){
+    int condition1=5>3;                      //true
+    int condition2=10<6;                     //false
+
+    printf("d",condition1 && condition2);       // output:false
+
+    printf("d",condition1 || condition2);       //output:true
+
+    printf("d",!(condition1));                  //output:false
+    return 0;
+};
+
+// Question_6:solve this problem.
+#include<stdio.h>
+int main(){
+    int a=3;
+    printf("%d %d %d",a,++a,a++);
+    return 0;
+    // output:5,5,3
+}

@@ -1,0 +1,157 @@
+// Question_1:write a program to check if a number is even or odd.
+#include<stdio.h>
+int main(){
+    int x;
+    printf("enter a number: ");
+    scanf("%d",&x);
+
+    if(x%2 == 0){
+        printf("number is even");
+    }else if(x%2 != 0){
+        printf("number is odd");
+    }else{
+        printf("error");
+    };
+    return 0;
+};
+
+
+// Question_2:write a program to check if a user is adult or not.
+#include<stdio.h>
+int main(){
+    int age;
+    printf("enter your age: ");
+    scanf("%d",&age);
+
+    if(age>18 && age<=100){
+        printf("adult");
+    }else if(age>0 && age<=18){
+        printf("child");
+    }else{
+        printf("error");
+    };
+    return 0;
+};
+
+
+// Question_3:write a program to check if a number is even or odd (using ternary operator).
+#include<stdio.h>
+int main(){
+    int x;
+    printf("enter a number: ");
+    scanf("%d",&x);
+
+    x%2 == 0 ? printf("even"):printf("odd");
+    return 0;
+};
+
+
+// Question_4:write a program to using switch condition.
+#include<stdio.h>
+int main(){
+    int day;
+    printf("enter day(1-7): ");
+    scanf("%d",&day);
+
+    switch(day){
+        case 1:printf("monday");
+        break;
+        case 2:printf("tuesday");
+        break;
+        case 3:printf("wednesday");
+        break;
+        case 4:printf("thursday");
+        break;
+        case 5:printf("friday");
+        break;
+        case 6:printf("saturday");
+        break;
+        case 7:printf("sunday");
+        break;
+        default:printf("not a value");
+    };
+    return 0;
+};
+
+
+// Question_5:write a program to give grade to a student.
+#include<stdio.h>
+int main(){
+    float marks;
+    printf("enter a marks: ");
+    scanf("%d",&marks); 
+
+    if(marks>90 && marks<=100){
+        printf("A");
+    }else if(marks>80 && marks<=90){
+        printf("B");
+    }else if(marks>70 && marks<=80){
+        printf("C");
+    }else if(marks>60 && marks<=70){
+        printf("D");
+    }else if(marks>50 && marks<=60){
+        printf("E");
+    }else if(marks>40 && marks<=50){
+        printf("F");
+    }else if(marks>0 && marks<=40){
+        printf("fail");
+    }else{
+        printf("error");
+    };
+    return 0;
+};
+
+
+// question_6: create a simple calculator for two variables.
+#include<stdio.h>
+int main(){
+    int num1,num2;
+    char ch;
+    float result;
+    printf("enter a number 1: \n");
+    scanf("%d",&num1);
+
+    printf("enter a number 2: \n");
+    scanf("%d",&num2);
+
+    printf("enter a operator to calculate: \n");
+    scanf("%c",&ch);
+
+    result=0;
+    switch(ch){
+        case '+':result=num1+num2;
+        break;
+        case '-':result=num1-num2;
+        break;
+        case '*':result=num1*num2;
+        break;
+        case '/':result=num1/num2;
+        break;
+        default:printf("error");
+        break;
+    };
+    printf("result of %d %c %d is %f \n",num1,ch,num2,result);
+    return 0;
+};
+
+
+// question_7: write a program to find the largest number.
+#include<stdio.h>
+int main(){
+    int n1,n2,n3;
+    int larger;
+    printf("enter first number : ");
+    scanf("%d",n1);
+    printf("enter second number : ");
+    scanf("%d",n2);
+    printf("enter third number : ");
+    scanf("%d",n3);
+    
+    larger=n1;
+    if(n2>larger){
+        printf("the larger no. is %d",n2);
+    }else if(n3>larger){
+        printf("the larger no. is %d",n3);
+    }
+    return 0;
+}

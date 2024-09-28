@@ -1,0 +1,175 @@
+// Question_1:write a function for a sum of two number given by user.
+#include<stdio.h>
+int sum(int a,int b);
+int main(){
+    int a,b;
+    printf("enter number a: ");
+    scanf("%d",&a);
+
+    printf("enter number b: ");
+    scanf("%d",&b);
+
+    int s=sum(a,b);
+    printf("%d",s);
+    return 0;
+};
+int sum(int a,int b){
+    return a+b;
+};
+
+
+// Question_2:write a function to calculate area of square.
+#include<stdio.h>
+float sqArea(float side);
+int main(){
+    float side=22.0;
+    printf("Area is: %d",sqArea(side));
+    return 0;
+};
+float sqArea(float side){
+    return side*side;
+};
+
+
+// Question_3:write a function to caculate area of rectangle.
+#include<stdio.h>
+int sqRectangle(int length,int breath);
+int main(){
+    int length,breath;
+    printf("enter number length: ");
+    scanf("%d",&length);
+
+    printf("enter number breath: ");
+    scanf("%d",&breath);
+
+    int s=sqRectangle(length,breath);
+    printf("Area is: %d",s);
+    return 0;
+};
+int sqRectangle(int length,int breath){
+    return length*breath;
+};
+
+
+// Question_4:write a function to covert celsius to fahrenheit.
+#include<stdio.h>
+float temp(float c);
+int main(){
+    float far=temp(45);
+    printf("%d",far);
+    return 0;
+};
+float temp(float c){
+    float far=c*(9/5)+32;
+    return far;
+};
+
+
+// Question_5:find the factorial using recursion.
+#include<stdio.h>
+int factorial(int x);
+int main(){
+    int a=factorial(4);
+    printf("%d",a);
+    return 0;
+};
+int factorial(int x){
+    if(x==1 || x==0){
+        return 1;
+    }else{
+        return x*factorial(x-1);
+    };
+};
+
+
+// Question_6:find the sum of n natural number using recursion.
+#include<stdio.h>
+int Sum(int n);
+int main(){
+    printf("%d",Sum(10));
+    return 0;
+};
+int Sum(int n){
+    if(n==1){
+        return 1;
+    };
+    int sum1=sum(n-1);
+    int sum2=sum1+n;
+    return sum2;
+};
+
+
+// Question_7:write a function to calculate force of attraction on a body of mass m exerted by earth(g=9.8).
+#include<stdio.h>
+float force(float mass);
+int main(){
+    int M;
+    printf("enter mass: ");
+    scanf("%d",&M);
+    printf("%d",force(M));
+    return 0;
+};
+float force(float mass){
+    float result=mass*9.8;
+    return result;
+}
+
+// Question_8:write a program using recursion to calculate n element of fibranchi series.
+#include<stdio.h>
+int fib(int n);
+int main(){
+    printf("%d",fib(5));
+    return 0;
+}
+int fib(int n){
+    if(n==0 || n==1){
+        if(n==0){
+            return 0;
+        }
+        if(n==1){
+            return 1;
+        }
+    }
+    int fibN=fib(n-1)+fib(n-2);
+    return fibN;
+};
+
+
+// Question_9:write a program to draw this patter.
+// *
+// ***
+// *****
+#include<stdio.h>
+void printPattern(int n);
+int main(){
+    int n=3;
+    printPattern(n);
+    return 0;
+};
+void printPattern(int n){
+    if(n==1){
+        printf("*\n");
+        return;
+    };
+    printPattern(n-1);
+    for(int i=0;i<(2*n-1);i++){
+        printf("*")
+    }
+    printf("\n");
+};
+
+
+// Question_10:write a program using recursion to print 5 time "hello world".
+#include<stdio.h>
+void printHello(int a);
+int main(){
+    printHello(5);
+    return 0;
+}
+void printHello(int a){
+    if(a==0){
+        return;
+    };
+    printf("hello world")
+    printHello(a-1);
+};
