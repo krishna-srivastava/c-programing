@@ -1,2 +1,2 @@
 # c-programing
-I am sharing practice question + projects
+I am sharing my practice question + projects of c language.
